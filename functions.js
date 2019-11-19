@@ -4,8 +4,9 @@ function youRock(name)
     return name; 
 }
 
-youRock("Samar"); 
+x=youRock("Samar"); 
 youRock("Sara"); 
+console.log(x)
 
 
 function square (num1)
@@ -44,16 +45,15 @@ toTheFourth(3);
 
 function add (num1, num2, operator)
 {
-    if(operator !== "*" || operator !== "/" || operator !== "-" !== operator !== "+")
-    {
-        return "calculator can only add, subtract, divide, or multiply"; 
-    }
-    else if(typeof num1 !== "Number" && typeof num2 !== "Number")
-    {
-        return "calculator only accepts numbers";
+   
+  if(typeof(num1) !== Number || typeof (num2) != Number)
+  {
+         return "calculator only accepts numbers";
 
-    }
-    else if(operator == "*")
+     }
+
+    
+    else if  (operator == "*")
     {
     return num1 * num2 ; 
     }
@@ -69,8 +69,12 @@ function add (num1, num2, operator)
     {
         return num1 - num2 ; 
     }
+    else if (operator == "*" || operator !== "/" || operator !== "-" !== operator !== "+")
+    {
+        return "calculator can only add, subtract, divide, or multiply"; 
+    }
     
-
+    
 }
 
 
@@ -87,3 +91,69 @@ add(1,2,"sadaskd")
 // calculator("cat", 2, "add") // should return "calculator only accepts numbers"
 
 
+
+
+function fizzBuzz(num)
+{
+     if (num %3 == 0 && num %5 == 0)
+    {
+        return "FizzBuzz"; 
+    }
+    else if(num %3 ==0)
+    {
+        return "Fizz";
+
+    }
+    else if (num %5 ==0)
+    {
+        return "Buzz"
+    }
+    
+    else {
+        return num; 
+    }
+}
+    c=fizzBuzz(15); 
+
+
+  
+
+
+    function rainDrop(num4)
+{
+    let x = "";
+
+    if(num4 %3 == 0)
+    {
+    x +=  "Pling" 
+    // return x;  
+    }
+
+    if(num4 %5 == 0)
+    {
+        x += "Plang"
+        // return x; 
+    }
+
+    if(num4 %7 ==0)
+    {
+        x += "Plong"
+        // return x;
+    }
+    if(num4%7 !== 0 || num4 %3 !==0 || num4%5 ==0 )
+    {
+        x += num4
+    }
+    return x; 
+
+}
+
+
+
+fun1=rainDrop(28) // Plong
+fun2=rainDrop(1755) // PlingPlang
+fun3=rainDrop(34) // 34
+
+// I DONT KNOW WHY ITS PRINTTING THE INPUT
+console.log(fun1 + "----" + fun2 + "----" + fun3)
+  
